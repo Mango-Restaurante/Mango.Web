@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mango.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5db7b94deda58f5334c7d2b8f1c002cde1c8853")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64464bedc31536d15948ffed452b0d3a4b950003")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mango.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mango.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
