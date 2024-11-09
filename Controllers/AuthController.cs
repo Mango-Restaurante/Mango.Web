@@ -98,9 +98,11 @@ namespace Mango.Web.Controllers
 		}
 
 
-		public IActionResult Logout()
+		public async Task<IActionResult> Logout()
 		{
-			return View();
+			await HttpContext.SignOutAsync();
+			_tokenProvider.ClearToken();
+			return RedirectToAction("Index", "Home");
 		}
 
 		private async Task SignInUser(LoginResponseDto model)
@@ -120,6 +122,9 @@ namespace Mango.Web.Controllers
 
 			identity.AddClaim(new Claim(ClaimTypes.Name,
 				 jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
+
+			identity.AddClaim(new Claim(ClaimTypes.Role,
+				 jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
 
 			var principal = new ClaimsPrincipal(identity);
 
